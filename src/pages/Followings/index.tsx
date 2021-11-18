@@ -78,7 +78,7 @@ export const Followings = () => {
         />
       </FollowingsBody>
       <FollowingsFooter>
-        <Navbar activePage='followings' />
+        <Navbar activePage='following' />
       </FollowingsFooter>
     </FollowingsContainer>
   )
