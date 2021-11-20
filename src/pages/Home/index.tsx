@@ -29,7 +29,6 @@ import { toast } from 'react-toastify';
 export const Profile = () => {
 
     const user = useSelector((state: RootState) => state.user)
-    const userName = user.login
     const dispatch = useDispatch()
     const history = useHistory()
 
@@ -73,15 +72,15 @@ export const Profile = () => {
                     </NameLocationContainer>
                 </MainInfoContainer>
                 <InfosContainer>
-                    <InfoContainer to={`/${userName}/followers`}>
+                    <InfoContainer to={`/followers`}>
                         <InfoNumber>{user.followers}</InfoNumber>
                         <InfoName>Seguidores</InfoName>
                     </InfoContainer>
-                    <InfoContainer to={`/${userName}/followings`}>
+                    <InfoContainer to={`/following`}>
                         <InfoNumber>{user.following}</InfoNumber>
                         <InfoName>Seguindo</InfoName>
                     </InfoContainer>
-                    <InfoContainer to={`/${userName}/repos`}>
+                    <InfoContainer to={`/repos`}>
                         <InfoNumber>{user.public_repos}</InfoNumber>
                         <InfoName>Repos</InfoName>
                     </InfoContainer>
